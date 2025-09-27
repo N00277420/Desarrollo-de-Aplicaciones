@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/textHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola desde HomeFragment"
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
+
+
+    <!-- Hora arriba -->
+    <TextView
+        android:id="@+id/txtHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:30"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp" />
+
+    <!-- Rayita de ajustes (ícono de menú) arriba derecha -->
+    <ImageView
+        android:id="@+id/iconoAjustes"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_menu_preferences"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerInside" />
+
+    <!-- Barra horizontal debajo de la hora -->
+    <View
+        android:id="@+id/barraHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E0E0E0"
+        android:layout_below="@+id/txtHora"
+        android:layout_marginTop="10dp" />
+
+    <!-- Logo del bus -->
+    <ImageView
+        android:id="@+id/logoBus"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icono_bus"
+        android:layout_below="@+id/barraHorizontal"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerInside" />
+
+    <!-- Título TrujiGo -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TrujiGo"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_toEndOf="@+id/logoBus"
+        android:layout_alignTop="@+id/logoBus"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp" />
+
+    <!-- BARRA VERTICAL GRIS -->
+    <View
+        android:id="@+id/barraVertical"
+        android:layout_width="4dp"
+        android:layout_height="30dp"
+        android:background="#E0E0E0"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp" />
+
+    <!-- Contenedor para Perfil con icono -->
+    <RelativeLayout
+        android:id="@+id/contenedorPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/boton_borde_gris"
+        android:layout_toEndOf="@+id/barraVertical"
+        android:layout_below="@+id/barraVertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iconopersona"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icono_persona"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perfil"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iconopersona"
+            android:layout_marginStart="15dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_below="@+id/contenedorPerfil"
+        android:layout_toEndOf="@+id/barraVertical" />
+
+    <!-- Contenedor para Mapa -->
+    <RelativeLayout
+        android:id="@+id/contenedorMapa"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/boton_borde_gris"
+        android:layout_toEndOf="@+id/barraVertical"
+        android:layout_below="@+id/contenedorPerfil"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iconoMapa"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icono_busqueda"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mapa"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iconoMapa"
+            android:layout_marginStart="15dp" />
+
+    </RelativeLayout>
+
+    <!-- Contenedor para Planificar -->
+    <RelativeLayout
+        android:id="@+id/contenedorPlanificar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/boton_borde_gris"
+        android:layout_toEndOf="@+id/barraVertical"
+        android:layout_below="@+id/contenedorMapa"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iconoPlanificar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icono_de_bus"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planificar"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iconoPlanificar"
+            android:layout_marginStart="15dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_below="@+id/contenedorPlanificar"
+        android:layout_toEndOf="@+id/barraVertical"
+        android:layout_marginStart="10dp" />
+
+    <!-- Contenedor para En Vivo -->
+    <RelativeLayout
+        android:id="@+id/contenedorEnVivo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/boton_borde_gris"
+        android:layout_toEndOf="@+id/barraVertical"
+        android:layout_below="@+id/contenedorPlanificar"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iconoEnVivo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icono_reloj"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En Vivo"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iconoEnVivo"
+            android:layout_marginStart="15dp" />
+
+    </RelativeLayout>
+
+    <!-- Ruedita configuración -->
+    <ImageView
+        android:id="@+id/iconoruedita"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icono_ruedita"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerInside" />
+
+</RelativeLayout>
